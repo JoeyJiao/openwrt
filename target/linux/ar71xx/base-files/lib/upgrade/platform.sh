@@ -456,6 +456,7 @@ platform_check_image() {
 	tl-wdr4300|\
 	tl-wdr4900-v2|\
 	tl-wdr6500-v2|\
+	tl-wdr7800-v1|\
 	tl-wpa8630|\
 	tl-wr1041n-v2|\
 	tl-wr1043nd|\
