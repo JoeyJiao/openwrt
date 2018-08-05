@@ -233,6 +233,19 @@ $(Device/tplink-8mlzma)
 endef
 TARGET_DEVICES += tl-wdr6500-v2
 
+define Device/tl-wdr7800-v1
+$(Device/tplink-8mlzma)
+  DEVICE_TITLE := TP-LINK TL-WDR7800v1
+  DEVICE_PACKAGES := kmod-ath10k ath10k-firmware-qca988x
+  KERNEL := kernel-bin | patch-cmdline | lzma | uImage lzma
+  KERNEL_INITRAMFS := kernel-bin | patch-cmdline | lzma | uImage lzma | mktplinkfw-combined
+  BOARDNAME = TL-WDR7800-v1
+  DEVICE_PROFILE = TLWDR7800V1
+  TPLINK_HWID := 0x78000001
+  TPLINK_HEADER_VERSION := 1
+endef
+TARGET_DEVICES += tl-wdr7800-v1
+
 define Device/tl-wdr3320-v2
 $(Device/tplink-4mlzma)
   DEVICE_TITLE := TP-LINK TL-WDR3320v2
